@@ -1,0 +1,17 @@
+﻿  main.cpp
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(7): error C2039: 'cout': is not a member of 'std'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\iomanip(20): note: see declaration of 'std'
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(7): error C2873: 'cout': symbol cannot be used in a using-declaration
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(54): error C2660: 'DemandeOperation': function does not take 0 arguments
+  p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(20): note: see declaration of 'DemandeOperation'
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(67): error C2065: 'cout': undeclared identifier
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(74): error C2065: 'cout': undeclared identifier
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(82): error C2065: 'cin': undeclared identifier
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(87): error C2065: 'cout': undeclared identifier
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(88): error C2065: 'cin': undeclared identifier
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(90): error C2065: 'cout': undeclared identifier
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(91): error C2065: 'cin': undeclared identifier
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(98): error C2065: 'cout': undeclared identifier
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(103): error C2065: 'cout': undeclared identifier
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(108): error C2065: 'cout': undeclared identifier
+p:\sortie\renaud_patrick\techprog\tp\tp3\tp3_debug\q1\main.cpp(113): error C2065: 'cout': undeclared identifier
