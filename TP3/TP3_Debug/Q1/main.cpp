@@ -3,10 +3,8 @@
 ///</summmary>
 
 #include <iomanip>
-
-using std::cout;
-using std::endl;
-using std::setw;
+#include <iostream>
+using namespace std;
 
 // @brief	Fonction principal. C'est cette fonction qui sera appelé par la fonction de point d'entrée
 // @return	int : Retourne 0 lorsque le programme doit se terminer
@@ -17,7 +15,7 @@ int Calculatrice();
 // @param	int& nombre1: Référence au premier nombre entrée par l'utilisateur
 // @param	int& nombre2: Référence au deuxième nombre entrée par l'utilisateur
 // @return	int: Retourne l'opération choisi par l'utilisateur
-int DemandeOperation(const int& nombre1, const int& nombre2);
+int DemandeOperation(int& nombre1, int& nombre2);
 
 // @brief	Fait l'addition des deux nombre en entrée et l'affiche
 // @param	const int& nombre1: Constante et référence du premier nombre entrée par l'utilisateur
@@ -46,23 +44,27 @@ int main()
 
 int Calculatrice()
 {
-	while (false)
+	while (true)
 	{
 		int nombre1 = 0;
 		int nombre2 = 0;
 
-		switch (DemandeOperation())
+		switch (DemandeOperation(nombre1, nombre2))
 		{
 		case -1:
 			return 0;
 		case 1:
 			Addition(nombre1, nombre2);
+			break;
 		case 2:
 			Soustraction(nombre1, nombre2);
+			break;
 		case 3:
 			Multiplication(nombre1, nombre2);
+			break;
 		case 4:
 			Division(nombre1, nombre2);
+			break;
 		default:
 			cout << "Wrong input. Please retry" << endl;
 		}
@@ -81,19 +83,20 @@ int DemandeOperation(int& nombre1, int& nombre2)
 	int operation = 0;
 	cin >> operation;
 
-	if (operation = -1)
+	if (operation == -1) 
+	{
 		return operation;
+	}
 
-	cout >> "Enter the first number: ";
-	cin << nombre1;
+	cout << "Enter the first number: ";
+	cin >> nombre1;
 	
-	cout >> "Enter the second number: ";
-	cin << nombre2;
+	cout << "Enter the second number: ";
+	cin >> nombre2;
 
 	return operation;
-} 
-
-void Additions(const int& nombre1, const int& nombre2)
+}
+void Addition(const int & nombre1, const int & nombre2)
 {
 	cout << "The addition is: " << nombre1 + nombre2 << endl << endl;
 }
@@ -108,7 +111,7 @@ void Division(const int& nombre1, const int& nombre2)
 	cout << "The division is: " << static_cast<float>(nombre1) / static_cast<float>(nombre2) << endl << endl;
 }
 
-void Multiplication(const int nombre1, const int nombre2)
+void Multiplication(const int & nombre1, const int & nombre2)
 {
 	cout << "The multiplication is: " << nombre1 * nombre2 << endl << endl;
 }
