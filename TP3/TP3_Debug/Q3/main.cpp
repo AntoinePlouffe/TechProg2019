@@ -21,23 +21,25 @@ int main()
 	int round = 1;
 	int count = 0;
 	int won = 0;
-	std::string choices[] = { "", "Rock", "Paper", "Scissor" };
-	round++;
+	std::string choices[] = {"", 
+		"Rock", "Paper", "Scissor" };
+
 	cout << "Welcome to rock-paper-scissor game. It'll be a 3 of 5." << endl;
 	cout << "Instruction: Rock = 1, Paper = 2, Scissor = 3" << endl;
 	
-	while (false)
+	while (true)
 	{
 		cout << endl;
 		cout << "ROUND " << round << endl;
 		// Generate a random number between 1 and 3 inclusive.
-		int cpuChoice = rand() % 3;
+		int cpuChoice = rand() % 3 + 1;
 		int myChoice = 0;
 
 		do {
 			cout << "Enter your choice (Rock = 1; Paper = 2, Scissor = 3): ";
 			cin >> myChoice;
 		} while (myChoice < 1 && myChoice > 3);
+
 
 		cout << "-----------------------------" << endl;
 		cout << "Your choice: " << choices[myChoice] << endl;
@@ -48,22 +50,24 @@ int main()
 		if (myChoice != cpuChoice)
 		{
 			// If I beat the cpu
-			if (myChoice == 1 && cpuChoice == 3 &&
-				myChoice == 2 && cpuChoice == 1 &&
-				myChoice == 3 && cpuChoice == 2)
+			if ((myChoice == 1 && cpuChoice == 3) ||
+				(myChoice == 2 && cpuChoice == 1) ||
+				(myChoice == 3 && cpuChoice == 2))
 			{
 				cout << "You win this round!" << endl;
+				won++;
 			}
 			else
 			{
 				cout << "You lose this round!" << endl;
+				count++;
+
 			}
-			count++;
 			
-			cout << "Your score is: " << won << " wins and " << (count + won) << " loses" << endl;
+			cout << "Your score is: " << won << " wins and " << count << " loses" << endl;
 
 			// If I won or lose 3 times, no need for a 4rd game.
-			if (won == MAX_WIN_OR_LOSE || count - won >= MAX_WIN_OR_LOSE)
+			if (won == MAX_WIN_OR_LOSE || count >= MAX_WIN_OR_LOSE)
 			{
 				break;
 			}			

@@ -5,6 +5,8 @@
 /// </summary>
 
 #include <istream>
+#include <iostream>
+using namespace std;
 
 using std::cin;
 using std::endl;
@@ -18,31 +20,45 @@ int main()
 	do
 	{
 		cout << "Entrer un nombre: ";
-		char chiffre = 0;
+		int chiffre = 0;
 		cin >> chiffre;
-		
+
 		// Valeur sentinelle entree, quittons la boucle do-while
-		if (chiffre = -1)
+		if (chiffre == -1) 
+		{
 			break;
-		
+		}
+
 		int resultat = 0;
 
 		// Le chiffre est pair 
-		if (chiffre % 2 != 0)
-			for (int i = 0; i <= chiffre; i += 2)
+		if (chiffre % 2 == 0)
+			for (int i = 0; i < chiffre; i++)
 			{
-				resultat += i;
+				if (i % 2 == 0)
+				{
+					resultat += i;
+				}
+				
 			}
 		// Le chiffre est impair
 		else
 		{
 			for (int i = 0; i < chiffre; i++)
 			{
-				resultat -= i;
+				if (i % 2 == 0)
+				{
+
+				}
+				else
+				{
+					resultat += i;
+				}
 			}
 		}
 
 		// Affichage du resultat
-		cout << "Le resultat est: " << result << endl << endl;
+		cout << "Le resultat est: " << resultat << endl << endl;
 
 	} while (true);
+}
